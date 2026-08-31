@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>מחשבון פנסיה – מה תהיה הקצבה שלכם · מחשבונים · אמנון בכר</title>
+<meta name="description" content="מחשבון קצבת פנסיה צפויה: כמה תצברו עד גיל הפרישה, לאיזו קצבה חודשית זה מתורגם, ומה הפער מול רמת ההכנסה שאתם רוצים. חישוב מקומי בדפדפן, בלי שמירת נתונים.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23081e42'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23bf9653' text-anchor='middle'>AB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="preview.css">
+<script src="preview.js" defer></script>
+<script src="calc.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">דילוג לתוכן הראשי</a>
+
+<!-- ===== סרגל תצוגה זמני - לא חלק מהאתר החי ===== -->
+<div class="pv-bar">
+  <div class="pv-inner">
+    <span class="pv-flag">גרסת תצוגה</span>
+    <nav class="pv-nav" aria-label="מעבר בין מחשבונים">
+      <a href="index.html">כל המחשבונים</a>
+      <a href="dmei-nihul.html">דמי ניהול</a>
+      <a href="pensiya.html" class="is-active" aria-current="page">קצבת פנסיה</a>
+      <a href="atzmaim.html">עצמאים</a>
+      <a href="keren-hishtalmut.html">קרן השתלמות</a>
+      <a href="yeladim.html">חיסכון לילדים</a>
+      <a href="ovdan-kosher.html">אכ״ע</a>
+      <a href="pitzuyim.html">פיצויים</a>
+      <a href="kibua-zchuyot.html">קיבוע זכויות</a>
+    </nav>
+    <a class="pv-live" href="https://amnonbahar.co.il" target="_blank" rel="noopener">לאתר החי ↗</a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="wrap" style="padding-top:40px;">
+  <span class="eyebrow">מחשבון · קצבה ופער פרישה</span>
+  <h1>כמה כסף יגיע אליכם כל חודש אחרי הפרישה?</h1>
+  <p class="lede">
+    רוב האנשים יודעים כמה הם מפקידים. הרבה פחות יודעים לאן זה מתרגם -
+    כמה יהיה בקופה ביום הפרישה, ולאיזו קצבה חודשית זה הופך. המחשבון
+    הזה מראה את שני המספרים, ואת הפער מול רמת החיים שאתם רוצים.
+  </p>
+</section>
+
+<div class="wrap">
+  <p class="byline"><b>מאת אמנון בכר</b><span class="byline-dot"></span><span>מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827</span></p>
+</div>
+
+<div class="trust-bar">
+  <div class="muted">החישוב רץ בדפדפן שלכם בלבד - שום נתון שתזינו כאן לא נשלח אלינו, לא נשמר ולא מועבר לאף גורם.</div>
+</div>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section class="wrap" id="calc" style="padding-top:22px;">
+  <div class="calc" id="penCalc">
+    <div class="calc-head">
+      <h2 style="font-size:24px;">אומדן הקצבה החודשית שלכם</h2>
+      <p>הזינו את הנתונים שלכם. התוצאה מתעדכנת מיד, וכל הנחת חישוב ניתנת לשינוי.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-fields">
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcAge">הגיל שלכם היום</label>
+            <span class="calc-slider-val" data-out="ageLabel">40</span>
+          </div>
+          <input class="calc-range" id="pcAge" type="range" min="20" max="70" step="1" value="40" data-in="age">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcRet">גיל הפרישה המתוכנן</label>
+            <span class="calc-slider-val" data-out="retAgeLabel">67</span>
+          </div>
+          <input class="calc-range" id="pcRet" type="range" min="60" max="75" step="1" value="67" data-in="retAge">
+          <p class="calc-hint">גיל הפרישה בישראל: 67 לגברים. לנשים הוא עולה בהדרגה לפי שנת הלידה, ומגיע ל-65 לילידות 1970 ואילך.</p>
+        </div>
+
+        <div class="calc-field">
+          <label for="pcSalary">שכר חודשי ברוטו</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="pcSalary" type="number" inputmode="numeric" min="0" step="500" value="18000" data-in="salary">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">עצמאים - ההכנסה החודשית הממוצעת שממנה אתם מפקידים.</p>
+        </div>
+
+        <div class="calc-field">
+          <label for="pcBal">צבירה פנסיונית קיימת</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="pcBal" type="number" inputmode="numeric" min="0" step="1000" value="400000" data-in="bal">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">סך הכסף שכבר צבור בקרנות הפנסיה, בקופות הגמל ובביטוחי המנהלים שלכם - יחד.</p>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcRate">שיעור ההפקדה החודשי הכולל</label>
+            <span class="calc-slider-val" data-out="rateLabel">18.5%</span>
+          </div>
+          <input class="calc-range" id="pcRate" type="range" min="0" max="23" step="0.5" value="18.5" data-in="rate">
+          <p class="calc-hint">אצל שכיר זה סכום שלושת הרכיבים: עובד, מעסיק ופיצויים. הפקדה מלאה נפוצה היא 18.5% ומעלה.</p>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcFee">דמי ניהול - מהצבירה</label>
+            <span class="calc-slider-val" data-out="feeLabel">0.30%</span>
+          </div>
+          <input class="calc-range" id="pcFee" type="range" min="0" max="1.05" step="0.01" value="0.3" data-in="fee">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcFeeDep">דמי ניהול - מההפקדה</label>
+            <span class="calc-slider-val" data-out="feeDepLabel">2.00%</span>
+          </div>
+          <input class="calc-range" id="pcFeeDep" type="range" min="0" max="6" step="0.05" value="2" data-in="feeDep">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcReturn">תשואה שנתית להנחת החישוב</label>
+            <span class="calc-slider-val" data-out="returnLabel">4.0%</span>
+          </div>
+          <input class="calc-range" id="pcReturn" type="range" min="0" max="8" step="0.1" value="4" data-in="ret">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcGrowth">עליית שכר שנתית ממוצעת</label>
+            <span class="calc-slider-val" data-out="growthLabel">2.0%</span>
+          </div>
+          <input class="calc-range" id="pcGrowth" type="range" min="0" max="6" step="0.1" value="2" data-in="growth">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcFactor">מקדם המרה לקצבה</label>
+            <span class="calc-slider-val" data-out="factorLabel">200</span>
+          </div>
+          <input class="calc-range" id="pcFactor" type="range" min="150" max="250" step="1" value="200" data-in="factor">
+          <p class="calc-hint">המספר שבו מחלקים את הצבירה כדי לקבל קצבה חודשית. הוא נקבע בגיל הפרישה לפי תוחלת החיים, מסלול הקצבה והתנאים בקרן - ומשתנה בין מוצרים.</p>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="pcTarget">רמת ההכנסה שתרצו בפרישה</label>
+            <span class="calc-slider-val" data-out="targetLabel">70% מהשכר</span>
+          </div>
+          <input class="calc-range" id="pcTarget" type="range" min="30" max="100" step="1" value="70" data-in="target">
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="calc-reset" data-calc-reset>איפוס לערכי ברירת המחדל</button>
+        </div>
+      </div>
+
+      <div class="calc-out" role="status" aria-live="polite">
+        <span class="calc-out-eyebrow">קצבה חודשית צפויה</span>
+        <p class="calc-out-value" data-out="pension">₪0</p>
+        <p class="calc-out-sub" data-out="pensionSub"></p>
+
+        <div class="calc-bars">
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>הקצבה הצפויה</span><span class="v" data-out="pension2">₪0</span></div>
+            <div class="calc-bar"><span data-bar="pensionPct"></span></div>
+          </div>
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>הקצבה שרציתם</span><span class="v" data-out="target2">₪0</span></div>
+            <div class="calc-bar is-alt"><span data-bar="targetPct"></span></div>
+          </div>
+        </div>
+
+        <ul class="calc-out-list">
+          <li><span class="k">צבירה צפויה ביום הפרישה</span><span class="v" data-out="finalBal">₪0</span></li>
+          <li><span class="k">שנות חיסכון שנותרו</span><span class="v" data-out="yearsLeft">0</span></li>
+          <li><span class="k">פער חודשי מול היעד</span><span class="v pos" data-out="gap">₪0</span></li>
+          <li><span class="k">הפקדה חודשית נוספת לסגירת הפער</span><span class="v pos" data-out="extra">₪0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="calc-assump">
+      <summary>ההנחות שמאחורי החישוב</summary>
+      <div class="calc-assump-body">
+        <ul>
+          <li>ההפקדה מחושבת כאחוז קבוע מהשכר, והשכר עולה בשיעור השנתי שבחרתם.</li>
+          <li>הקצבה מתקבלת מחלוקת הצבירה במקדם ההמרה. מקדם ההמרה האמיתי נקבע רק בגיל הפרישה, לפי מסלול הקצבה, מצב משפחתי ותנאי המוצר - וכולל תרחישים שאין להם ביטוי כאן.</li>
+          <li>לא נלקחה בחשבון עלות הכיסויים הביטוחיים בקרן פנסיה (שאירים ואובדן כושר עבודה), שנגבית מההפקדה בנוסף לדמי הניהול ומקטינה את הצבירה.</li>
+          <li>אין כאן קצבת זקנה מביטוח לאומי, ואין כאן חסכונות שאינם פנסיוניים.</li>
+          <li>החישוב במונחים נומינליים - בלי התאמה לאינפלציה ובלי מס. קצבה של ₪10,000 בעוד 25 שנה שווה פחות מ-₪10,000 היום.</li>
+        </ul>
+      </div>
+    </details>
+
+    <p class="calc-disclaimer">
+      <b>אומדן להמחשה בלבד.</b> זהו חישוב מפושט שנועד להראות סדר גודל ולא תחזית.
+      הוא אינו ייעוץ, אינו המלצה ואינו הבטחת תשואה או קצבה. קצבה בפועל נקבעת על ידי
+      הגוף המנהל בהתאם לתקנון, לצבירה, למקדם ולתנאים האישיים במועד הפרישה.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= READ ============================= -->
+<section class="wrap section-soft" id="read">
+  <h2>שלושת המספרים שכדאי להסתכל עליהם</h2>
+  <div class="service-grid">
+    <div class="card">
+      <h3>הפער החודשי</h3>
+      <p>
+        ההפרש בין הקצבה הצפויה לרמת ההכנסה שרציתם. אם הוא קטן - התוכנית
+        בכיוון. אם הוא גדול, עדיף לגלות אותו עשרים שנה מראש ולא בשנה שלפני.
+      </p>
+    </div>
+    <div class="card">
+      <h3>ההפקדה הנוספת</h3>
+      <p>
+        כמה צריך להוסיף כל חודש מהיום כדי לסגור את הפער. זה בדרך כלל המספר
+        שהופך את הדיון מתאורטי למעשי - ולפעמים הוא קטן ממה שמצפים.
+      </p>
+    </div>
+    <div class="card">
+      <h3>מקדם ההמרה</h3>
+      <p>
+        אותה צבירה בדיוק יכולה להפוך לקצבאות שונות, תלוי במקדם. בפוליסות
+        ותיקות יש לפעמים מקדם מובטח ששווה הרבה כסף - וסיבה טובה לא לנייד
+        אותן בלי בדיקה.
+      </p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:16px;font-size:14px;">
+    להעמקה: <a href="https://amnonbahar.co.il/pensia/" target="_blank" rel="noopener">קרן פנסיה</a> ·
+    <a href="https://amnonbahar.co.il/prisha/" target="_blank" rel="noopener">תכנון וליווי פרישה</a> ·
+    <a href="https://amnonbahar.co.il/menahalim/" target="_blank" rel="noopener">ביטוח מנהלים ומקדם מובטח</a> ·
+    <a href="https://amnonbahar.co.il/timeline/" target="_blank" rel="noopener">מה עושים בכל גיל</a>
+  </p>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="wrap" id="faq">
+  <h2>שאלות נפוצות</h2>
+
+  <details class="faq-item">
+    <summary><h3>למה הקצבה שיצאה לי נמוכה ממה שציפיתי?</h3></summary>
+    <div class="faq-a"><p>
+      הסיבות הנפוצות: תקופות שבהן לא הופקד כלל (חל"ת, מעבר עבודה, תקופות
+      עצמאות), הפקדה בשיעור נמוך מהמקסימלי, דמי ניהול גבוהים, או משיכת כספי
+      פיצויים בעבר שהקטינה את הצבירה. כל אחת מהן ניתנת לזיהוי בבדיקה של התיק.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>המחשבון כולל את קצבת הזקנה מביטוח לאומי?</h3></summary>
+    <div class="faq-a"><p>
+      לא. הוא מציג רק את הקצבה שתגיע מהחיסכון הפנסיוני שלכם. קצבת הזקנה
+      מביטוח לאומי היא שכבה נוספת ונפרדת, וגם היא חלק מהתמונה המלאה.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>מה זה מקדם המרה, ולמה הוא כל כך משפיע?</h3></summary>
+    <div class="faq-a"><p>
+      זה המספר שבו מחלקים את הצבירה כדי לקבל קצבה חודשית. מקדם 200 על צבירה
+      של מיליון שקל נותן ₪5,000 בחודש; מקדם 220 על אותה צבירה נותן פחות.
+      המקדם נגזר מתוחלת החיים, ממסלול הקצבה שנבחר ומתנאי המוצר.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>אני עצמאי - המחשבון מתאים לי?</h3></summary>
+    <div class="faq-a"><p>
+      כן, אם תזינו את ההכנסה החודשית ואת שיעור ההפקדה שאתם מפקידים בפועל.
+      לחישוב ההפקדה המחויבת בחוק ולהטבות המס יש
+      <a href="atzmaim.html">מחשבון נפרד לעצמאים</a>.
+    </p></div>
+  </details>
+</section>
+
+<!-- ============================= CLOSING ============================= -->
+<section class="wrap section-soft" id="contact">
+  <h2>המספר על המסך הוא התחלה, לא סוף</h2>
+  <p class="lede">
+    בשיחת היכרות אישית נעבור על התיק האמיתי שלכם - כל הקרנות, כל הקופות,
+    התקופות החסרות ודמי הניהול בפועל - ונראה מה באמת צפוי, ומה אפשר לשפר.
+  </p>
+  <div class="cta-row">
+    <a href="https://wa.me/972544909201" class="btn btn-primary" target="_blank" rel="noopener">לקביעת שיחת היכרות</a>
+    <a href="index.html" class="btn btn-secondary">לשאר המחשבונים</a>
+  </div>
+</section>
+
+<script>
+AB.init('#penCalc', function (v) {
+  var yrs = Math.max(0, v.retAge - v.age);
+  var monthly = v.salary * (v.rate / 100);
+  var res = AB.accumulate({ initial: v.bal, monthly: monthly, years: yrs, annualReturn: v.ret,
+                            feeOnBalance: v.fee, feeOnDeposit: v.feeDep, growth: v.growth });
+  var factor = Math.max(1, v.factor);
+  var pension = res.balance / factor;
+  var salaryAtRet = v.salary * Math.pow(1 + v.growth / 100, yrs);
+  var target = salaryAtRet * (v.target / 100);
+  var gap = Math.max(0, target - pension);
+
+  /* כמה צריך להוסיף כל חודש כדי לסגור את הפער - חיפוש בינארי */
+  var extra = 0;
+  if (gap > 0 && yrs > 0) {
+    var lo = 0, hi = Math.max(1000, target * 2);
+    for (var i = 0; i < 40; i++) {
+      var mid = (lo + hi) / 2;
+      var t = AB.accumulate({ initial: v.bal, monthly: monthly + mid, years: yrs, annualReturn: v.ret,
+                              feeOnBalance: v.fee, feeOnDeposit: v.feeDep, growth: v.growth });
+      if (t.balance / factor < target) lo = mid; else hi = mid;
+    }
+    extra = hi;
+  }
+
+  var max = Math.max(pension, target, 1);
+  return {
+    ageLabel: v.age,
+    retAgeLabel: v.retAge,
+    rateLabel: AB.pct(v.rate),
+    feeLabel: AB.pct(v.fee, 2),
+    feeDepLabel: AB.pct(v.feeDep, 2),
+    returnLabel: AB.pct(v.ret),
+    growthLabel: AB.pct(v.growth),
+    factorLabel: Math.round(factor),
+    targetLabel: Math.round(v.target) + '% מהשכר',
+    pension: AB.money(pension),
+    pension2: AB.money(pension),
+    pensionSub: yrs > 0
+      ? 'לפי צבירה צפויה של ' + AB.money(res.balance) + ' בגיל ' + v.retAge + ', ומקדם המרה ' + Math.round(factor) + '.'
+      : 'גיל הפרישה שבחרתם כבר עבר או שווה לגיל הנוכחי - שנו את אחד מהם כדי לראות תחזית.',
+    target2: AB.money(target),
+    pensionPct: (pension / max) * 100,
+    targetPct: (target / max) * 100,
+    finalBal: AB.money(res.balance),
+    yearsLeft: AB.years(yrs),
+    gap: gap > 0 ? AB.money(gap) : 'אין פער',
+    extra: extra > 0 ? AB.money(extra) : '—'
+  };
+});
+</script>
+</main>
+
+<footer class="pv-foot">
+  <p><b>אמנון בכר</b> · מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827 · השירות ניתן בכל הארץ</p>
+  <p>זו סביבת תצוגה לבדיקת המחשבונים בלבד. הגרסה המלאה, כולל טופס יצירת הקשר,
+     נמצאת ב-<a href="https://amnonbahar.co.il/machshevonim/" target="_blank" rel="noopener">amnonbahar.co.il</a>.
+     המחשבונים הם אומדן להמחשה בלבד ואינם ייעוץ או הבטחת תשואה.</p>
+</footer>
+
+</body>
+</html>

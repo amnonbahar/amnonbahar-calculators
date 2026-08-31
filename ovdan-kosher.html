@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>מחשבון אובדן כושר עבודה – כמה חסר · מחשבונים · אמנון בכר</title>
+<meta name="description" content="מחשבון אובדן כושר עבודה: כמה תקבלו בפועל אם לא תוכלו לעבוד, מהו הכיסוי המרבי של 75% מהשכר, ומהו הפער בין ההכנסה שתישאר להוצאות הקבועות שלכם.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23081e42'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23bf9653' text-anchor='middle'>AB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="preview.css">
+<script src="preview.js" defer></script>
+<script src="calc.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">דילוג לתוכן הראשי</a>
+
+<!-- ===== סרגל תצוגה זמני - לא חלק מהאתר החי ===== -->
+<div class="pv-bar">
+  <div class="pv-inner">
+    <span class="pv-flag">גרסת תצוגה</span>
+    <nav class="pv-nav" aria-label="מעבר בין מחשבונים">
+      <a href="index.html">כל המחשבונים</a>
+      <a href="dmei-nihul.html">דמי ניהול</a>
+      <a href="pensiya.html">קצבת פנסיה</a>
+      <a href="atzmaim.html">עצמאים</a>
+      <a href="keren-hishtalmut.html">קרן השתלמות</a>
+      <a href="yeladim.html">חיסכון לילדים</a>
+      <a href="ovdan-kosher.html" class="is-active" aria-current="page">אכ״ע</a>
+      <a href="pitzuyim.html">פיצויים</a>
+      <a href="kibua-zchuyot.html">קיבוע זכויות</a>
+    </nav>
+    <a class="pv-live" href="https://amnonbahar.co.il" target="_blank" rel="noopener">לאתר החי ↗</a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="wrap" style="padding-top:40px;">
+  <span class="eyebrow">מחשבון · אובדן כושר עבודה</span>
+  <h1>אם מחר לא תוכלו לעבוד - כמה יכנס לחשבון?</h1>
+  <p class="lede">
+    זה הכיסוי שאף אחד לא בודק, עד הרגע שבו הוא נחוץ. המחשבון מראה מה
+    הכיסוי הקיים שלכם שווה בשקלים, מה התקרה שהחוק מאפשר, ומה הפער מול
+    ההוצאות הקבועות של הבית.
+  </p>
+</section>
+
+<div class="wrap">
+  <p class="byline"><b>מאת אמנון בכר</b><span class="byline-dot"></span><span>מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827</span></p>
+</div>
+
+<div class="trust-bar">
+  <div class="muted">החישוב רץ בדפדפן שלכם בלבד - שום נתון שתזינו כאן לא נשלח אלינו, לא נשמר ולא מועבר לאף גורם.</div>
+</div>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section class="wrap" id="calc" style="padding-top:22px;">
+  <div class="calc" id="diCalc">
+    <div class="calc-head">
+      <h2 style="font-size:24px;">הכיסוי שלכם מול המציאות</h2>
+      <p>הזינו שכר, הוצאות והכיסויים שכבר יש לכם. התוצאה מתעדכנת מיד.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-fields">
+        <fieldset class="calc-field">
+          <legend class="calc-legend">המעמד שלכם</legend>
+          <div class="calc-seg">
+            <input type="radio" name="diMode" id="diEmp" value="emp" checked data-in="mode"><label for="diEmp">שכיר</label>
+            <input type="radio" name="diMode" id="diSelf" value="self" data-in="mode"><label for="diSelf">עצמאי</label>
+          </div>
+        </fieldset>
+
+        <div class="calc-field">
+          <label for="diSalary">הכנסה חודשית ברוטו</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="diSalary" type="number" inputmode="numeric" min="0" step="500" value="18000" data-in="salary">
+            <span class="calc-unit">₪</span>
+          </span>
+        </div>
+
+        <div class="calc-field">
+          <label for="diExp">הוצאות חודשיות קבועות של הבית</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="diExp" type="number" inputmode="numeric" min="0" step="500" value="14000" data-in="exp">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">משכנתא או שכר דירה, מזון, חינוך, רכב, ביטוחים - כל מה שממשיך לרוץ גם כשלא עובדים.</p>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="diPension">כיסוי אכ״ע בקרן הפנסיה</label>
+            <span class="calc-slider-val" data-out="pensionLabel">75% מהשכר</span>
+          </div>
+          <input class="calc-range" id="diPension" type="range" min="0" max="75" step="1" value="75" data-in="pensionPct">
+          <p class="calc-hint">בקרן פנסיה מקיפה יש כיסוי מובנה לאובדן כושר עבודה, אבל שיעורו תלוי במסלול הביטוחי שנבחר - ולא תמיד הוא מלא. עצמאים שאין להם קרן פנסיה מקיפה - הזינו 0.</p>
+        </div>
+
+        <div class="calc-field">
+          <label for="diPrivate">כיסוי חודשי מפוליסה פרטית</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="diPrivate" type="number" inputmode="numeric" min="0" step="500" value="0" data-in="priv">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">אם יש לכם פוליסת אכ״ע פרטית נפרדת - הזינו את הפיצוי החודשי שהיא מבטיחה.</p>
+        </div>
+
+        <div class="calc-field">
+          <label for="diOther">הכנסה חודשית אחרת שתימשך</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="diOther" type="number" inputmode="numeric" min="0" step="500" value="0" data-in="other">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">שכר של בן או בת זוג, שכר דירה, או כל הכנסה שלא תיפגע.</p>
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="calc-reset" data-calc-reset>איפוס לערכי ברירת המחדל</button>
+        </div>
+      </div>
+
+      <div class="calc-out" role="status" aria-live="polite">
+        <span class="calc-out-eyebrow">הפער החודשי מול ההוצאות</span>
+        <p class="calc-out-value" data-out="gap">₪0</p>
+        <p class="calc-out-sub" data-out="gapSub"></p>
+
+        <div class="calc-bars">
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>הוצאות חודשיות</span><span class="v" data-out="exp2">₪0</span></div>
+            <div class="calc-bar is-alt"><span data-bar="expPct"></span></div>
+          </div>
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>הכנסה שתישאר בפועל</span><span class="v" data-out="income">₪0</span></div>
+            <div class="calc-bar"><span data-bar="incomePct"></span></div>
+          </div>
+        </div>
+
+        <ul class="calc-out-list">
+          <li><span class="k">כיסוי מקרן הפנסיה</span><span class="v" data-out="fromPension">₪0</span></li>
+          <li><span class="k">כיסוי מפוליסה פרטית</span><span class="v" data-out="fromPrivate">₪0</span></li>
+          <li><span class="k">התקרה שהחוק מאפשר (75%)</span><span class="v" data-out="maxCover">₪0</span></li>
+          <li><span class="k">מרווח לכיסוי נוסף</span><span class="v pos" data-out="headroom">₪0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="calc-assump">
+      <summary>ההנחות שמאחורי החישוב</summary>
+      <div class="calc-assump-body">
+        <ul>
+          <li>הכיסוי הכולל לאובדן כושר עבודה מוגבל ל-75% מההכנסה. אי אפשר לבטח מעבר לכך, וגם אם רוכשים כמה פוליסות - הפיצוי בפועל לא יעלה על התקרה.</li>
+          <li>הכיסוי מקרן הפנסיה מחושב כאחוז שבחרתם מתוך ההכנסה שהזנתם.</li>
+          <li>לא נלקחה בחשבון קצבת נכות מהמוסד לביטוח לאומי, שעשויה להתקבל בנוסף - ובחלק מהפוליסות מקוזזת מהפיצוי.</li>
+          <li>לא נלקחה בחשבון תקופת ההמתנה שבתחילת האירוע, שבמהלכה בדרך כלל לא משולם פיצוי כלל.</li>
+          <li>הסכומים במונחים של היום, ברוטו, ובלי התייחסות למס על הפיצוי.</li>
+        </ul>
+      </div>
+    </details>
+
+    <p class="calc-disclaimer">
+      <b>אומדן להמחשה בלבד.</b> אינו ייעוץ ואינו תחליף לקריאת תנאי הפוליסה שלכם.
+      השאלה הקריטית בכל פוליסה אינה רק הסכום, אלא ההגדרה - האם הכיסוי חל כשאינכם
+      יכולים לעסוק <b>בעיסוק הספציפי שלכם</b>, או רק כשאינכם מסוגלים לכל
+      "עיסוק סביר אחר". ההבדל הזה קובע אם תביעה תאושר.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= READ ============================= -->
+<section class="wrap section-soft" id="read">
+  <h2>מה באמת קובע אם הכיסוי יעבוד</h2>
+  <div class="service-grid">
+    <div class="card">
+      <h3>ההגדרה, לא הסכום</h3>
+      <p>
+        פוליסה שמכסה רק "אי-יכולת לעסוק בכל עיסוק סביר" תדחה תביעה של מנתח
+        שיכול לעבוד כפקיד. פוליסה שמוגדרת לפי העיסוק הספציפי - לא. זה הסעיף
+        שכדאי לקרוא לפני שמסתכלים על המחיר.
+      </p>
+    </div>
+    <div class="card">
+      <h3>עצמאים חשופים יותר</h3>
+      <p>
+        לשכיר יש בדרך כלל כיסוי מובנה בקרן הפנסיה דרך המעסיק. עצמאי צריך
+        ליזום את הכיסוי בעצמו - ובדיוק אצלו הפסקת העבודה פוגעת בהכנסה
+        באופן מיידי ומלא.
+      </p>
+    </div>
+    <div class="card">
+      <h3>שכר גבוה, כיסוי חלקי</h3>
+      <p>
+        קרן פנסיה מבטחת עד תקרה מסוימת. מי שמשתכר מעליה מגלה לעיתים שהכיסוי
+        מכסה רק חלק מההכנסה האמיתית שלו - וזה בדיוק המרווח שהמחשבון מציג.
+      </p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:16px;font-size:14px;">
+    להעמקה: <a href="https://amnonbahar.co.il/ovdankosher/" target="_blank" rel="noopener">מדריך אובדן כושר עבודה</a> ·
+    <a href="https://amnonbahar.co.il/life/" target="_blank" rel="noopener">ביטוח חיים</a> ·
+    <a href="https://amnonbahar.co.il/bituachb/" target="_blank" rel="noopener">ביטוח בריאות</a> ·
+    <a href="https://amnonbahar.co.il/pensia/" target="_blank" rel="noopener">קרן פנסיה</a>
+  </p>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="wrap" id="faq">
+  <h2>שאלות נפוצות</h2>
+
+  <details class="faq-item">
+    <summary><h3>יש לי כיסוי בקרן הפנסיה. צריך עוד משהו?</h3></summary>
+    <div class="faq-a"><p>
+      תלוי בשלושה דברים: שיעור הכיסוי במסלול שנבחר, האם השכר שלכם מעל
+      התקרה המבוטחת, ואיזו הגדרת עיסוק חלה. אצל חלק מהאנשים הכיסוי המובנה
+      מספיק לגמרי, ואצל אחרים הוא מכסה חצי מההכנסה בפועל.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>למה אי אפשר לבטח 100% מההכנסה?</h3></summary>
+    <div class="faq-a"><p>
+      התקרה של 75% היא כלל מקובל בענף, שנועד לשמור על תמריץ לחזור לעבודה.
+      גם מי שרוכש כמה פוליסות במקביל לא יקבל מעבר לתקרה - ולכן כפל ביטוחים
+      הוא לרוב תשלום מיותר.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>מה זו תקופת המתנה?</h3></summary>
+    <div class="faq-a"><p>
+      פרק זמן מתחילת אובדן הכושר שבו עדיין לא משולם פיצוי. ככל שהיא ארוכה
+      יותר הפרמיה זולה יותר - אבל צריך שיהיה מספיק כסף נזיל כדי לגשר עליה.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>ביטוח לאומי לא מכסה את זה?</h3></summary>
+    <div class="faq-a"><p>
+      קצבת נכות מביטוח לאומי היא שכבה נפרדת, עם קריטריונים משלה, והיא
+      בדרך כלל נמוכה משמעותית מההכנסה מעבודה. בחלק מהפוליסות היא גם מקוזזת
+      מהפיצוי - פרט שחשוב לבדוק בפוליסה הספציפית.
+    </p></div>
+  </details>
+</section>
+
+<!-- ============================= CLOSING ============================= -->
+<section class="wrap section-soft" id="contact">
+  <h2>שווה לדעת את זה לפני, ולא במקום שבו כבר אין ברירה</h2>
+  <p class="lede">
+    בשיחת היכרות אישית נעבור על הכיסויים שכבר יש לכם - בקרן, בפוליסות
+    ובמקומות שאולי שכחתם - נבדוק כפילויות וחוסרים, ונראה מה באמת נדרש.
+  </p>
+  <div class="cta-row">
+    <a href="https://wa.me/972544909201" class="btn btn-primary" target="_blank" rel="noopener">לקביעת שיחת היכרות</a>
+    <a href="index.html" class="btn btn-secondary">לשאר המחשבונים</a>
+  </div>
+</section>
+
+<script>
+AB.init('#diCalc', function (v) {
+  var maxCover = v.salary * 0.75;
+  var fromPension = v.salary * (v.pensionPct / 100);
+  var covered = Math.min(maxCover, fromPension + Math.max(0, v.priv));
+  var income = covered + Math.max(0, v.other);
+  var gap = Math.max(0, v.exp - income);
+  var headroom = Math.max(0, maxCover - (fromPension + Math.max(0, v.priv)));
+  var max = Math.max(v.exp, income, 1);
+
+  var sub;
+  if (gap > 0) sub = 'זה הסכום החודשי שיחסר לכם כדי לכסות את ההוצאות הקבועות, אם לא תוכלו לעבוד.';
+  else sub = 'לפי הנתונים שהזנתם, ההכנסה שתישאר מכסה את ההוצאות הקבועות. שווה עדיין לבדוק את הגדרת העיסוק בפוליסה.';
+
+  return {
+    pensionLabel: Math.round(v.pensionPct) + '% מהשכר',
+    gap: gap > 0 ? AB.money(gap) : 'אין פער',
+    gapSub: sub,
+    exp2: AB.money(v.exp),
+    income: AB.money(income),
+    expPct: (v.exp / max) * 100,
+    incomePct: (income / max) * 100,
+    fromPension: AB.money(fromPension),
+    fromPrivate: AB.money(Math.max(0, v.priv)),
+    maxCover: AB.money(maxCover),
+    headroom: headroom > 1 ? AB.money(headroom) : 'הכיסוי כבר בתקרה'
+  };
+});
+</script>
+</main>
+
+<footer class="pv-foot">
+  <p><b>אמנון בכר</b> · מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827 · השירות ניתן בכל הארץ</p>
+  <p>זו סביבת תצוגה לבדיקת המחשבונים בלבד. הגרסה המלאה, כולל טופס יצירת הקשר,
+     נמצאת ב-<a href="https://amnonbahar.co.il/machshevonim/" target="_blank" rel="noopener">amnonbahar.co.il</a>.
+     המחשבונים הם אומדן להמחשה בלבד ואינם ייעוץ או הבטחת תשואה.</p>
+</footer>
+
+</body>
+</html>

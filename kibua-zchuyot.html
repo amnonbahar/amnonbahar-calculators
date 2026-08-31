@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>בדיקת התאמה – קיבוע זכויות ופטור · מחשבונים · אמנון בכר</title>
+<meta name="description" content="שאלון קצר שבודק עד כמה קיבוע הזכויות רלוונטי לכם עכשיו: גיל, קצבה, משיכות פיצויים בעבר, מענקי פרישה והיוון - ומה כדאי לעשות בשלב הבא.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23081e42'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23bf9653' text-anchor='middle'>AB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="preview.css">
+<script src="preview.js" defer></script>
+<script src="calc.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">דילוג לתוכן הראשי</a>
+
+<!-- ===== סרגל תצוגה זמני - לא חלק מהאתר החי ===== -->
+<div class="pv-bar">
+  <div class="pv-inner">
+    <span class="pv-flag">גרסת תצוגה</span>
+    <nav class="pv-nav" aria-label="מעבר בין מחשבונים">
+      <a href="index.html">כל המחשבונים</a>
+      <a href="dmei-nihul.html">דמי ניהול</a>
+      <a href="pensiya.html">קצבת פנסיה</a>
+      <a href="atzmaim.html">עצמאים</a>
+      <a href="keren-hishtalmut.html">קרן השתלמות</a>
+      <a href="yeladim.html">חיסכון לילדים</a>
+      <a href="ovdan-kosher.html">אכ״ע</a>
+      <a href="pitzuyim.html">פיצויים</a>
+      <a href="kibua-zchuyot.html" class="is-active" aria-current="page">קיבוע זכויות</a>
+    </nav>
+    <a class="pv-live" href="https://amnonbahar.co.il" target="_blank" rel="noopener">לאתר החי ↗</a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="wrap" style="padding-top:40px;">
+  <span class="eyebrow">בדיקת התאמה · קיבוע זכויות</span>
+  <h1>למה אין כאן מחשבון - ומה יש במקומו.</h1>
+  <p class="lede">
+    קיבוע זכויות הוא אחד הנושאים שבהם מחשבון היה מטעה יותר משהיה עוזר:
+    התוצאה תלויה בהיסטוריית מענקים ומשיכות של שלושים ושתיים שנה אחורה,
+    שאף אחד לא זוכר בעל פה. במקום מספר שגוי - שש שאלות שמראות עד כמה
+    הנושא דחוף אצלכם.
+  </p>
+</section>
+
+<div class="wrap">
+  <p class="byline"><b>מאת אמנון בכר</b><span class="byline-dot"></span><span>מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827</span></p>
+</div>
+
+<div class="trust-bar">
+  <div class="muted">התשובות נשארות בדפדפן שלכם בלבד - שום נתון לא נשלח אלינו, לא נשמר ולא מועבר לאף גורם.</div>
+</div>
+
+<!-- ============================= QUIZ ============================= -->
+<section class="wrap" id="quiz" style="padding-top:22px;">
+  <div class="calc" id="kibuaQuiz">
+    <div class="calc-head">
+      <h2 style="font-size:24px;">שש שאלות</h2>
+      <p>אין תשובה נכונה או שגויה. "לא בטוח" היא תשובה לגיטימית - ולעיתים היא עצמה הממצא.</p>
+    </div>
+
+    <div class="quiz-q">
+      <fieldset>
+        <legend class="calc-legend">1. באיזה שלב אתם נמצאים מבחינת גיל?</legend>
+        <div class="calc-seg">
+          <input type="radio" name="q1" id="q1a" value="0" checked data-in="q1"><label for="q1a">מתחת לגיל 60</label>
+          <input type="radio" name="q1" id="q1b" value="2" data-in="q1"><label for="q1b">60 עד 66</label>
+          <input type="radio" name="q1" id="q1c" value="3" data-in="q1"><label for="q1c">67 ומעלה</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="quiz-q">
+      <fieldset>
+        <legend class="calc-legend">2. האם אתם כבר מקבלים קצבה חודשית מקרן פנסיה, מביטוח מנהלים או מקופת גמל?</legend>
+        <div class="calc-seg">
+          <input type="radio" name="q2" id="q2a" value="3" data-in="q2"><label for="q2a">כן, כבר מקבל</label>
+          <input type="radio" name="q2" id="q2b" value="2" data-in="q2"><label for="q2b">לא, אבל בשנה-שנתיים הקרובות</label>
+          <input type="radio" name="q2" id="q2c" value="0" checked data-in="q2"><label for="q2c">לא, ועוד רחוק</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="quiz-q">
+      <fieldset>
+        <legend class="calc-legend">3. האם משכתם בעבר כספי פיצויים בפטור ממס בסיום עבודה?</legend>
+        <div class="calc-seg">
+          <input type="radio" name="q3" id="q3a" value="3" data-in="q3"><label for="q3a">כן</label>
+          <input type="radio" name="q3" id="q3b" value="0" data-in="q3"><label for="q3b">לא</label>
+          <input type="radio" name="q3" id="q3c" value="3" checked data-in="q3"><label for="q3c">לא בטוח</label>
+        </div>
+        <p class="calc-hint">זו השאלה שהכי משפיעה על גובה הפטור שיישאר לכם על הקצבה. אצל רוב האנשים התשובה מסתתרת במסמכים ישנים.</p>
+      </fieldset>
+    </div>
+
+    <div class="quiz-q">
+      <fieldset>
+        <legend class="calc-legend">4. האם קיבלתם מענק פרישה או מענק פיטורים ממעסיק ב-32 השנים האחרונות?</legend>
+        <div class="calc-seg">
+          <input type="radio" name="q4" id="q4a" value="3" data-in="q4"><label for="q4a">כן</label>
+          <input type="radio" name="q4" id="q4b" value="0" data-in="q4"><label for="q4b">לא</label>
+          <input type="radio" name="q4" id="q4c" value="2" checked data-in="q4"><label for="q4c">לא בטוח</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="quiz-q">
+      <fieldset>
+        <legend class="calc-legend">5. האם ביצעתם היוון של קצבה - כלומר קיבלתם סכום חד-פעמי במקום חלק מהקצבה?</legend>
+        <div class="calc-seg">
+          <input type="radio" name="q5" id="q5a" value="3" data-in="q5"><label for="q5a">כן</label>
+          <input type="radio" name="q5" id="q5b" value="0" checked data-in="q5"><label for="q5b">לא</label>
+          <input type="radio" name="q5" id="q5c" value="2" data-in="q5"><label for="q5c">לא בטוח</label>
+        </div>
+        <p class="calc-hint">להיוון יש כלל תזמון נוקשה מול הגשת הבקשה לקיבוע זכויות, ואיחור בו עלול לעלות ביוקר.</p>
+      </fieldset>
+    </div>
+
+    <div class="quiz-q">
+      <fieldset>
+        <legend class="calc-legend">6. האם כבר הגשתם טופס 161ד (בקשה לקיבוע זכויות) לרשות המסים?</legend>
+        <div class="calc-seg">
+          <input type="radio" name="q6" id="q6a" value="0" data-in="q6"><label for="q6a">כן, הוגש</label>
+          <input type="radio" name="q6" id="q6b" value="3" checked data-in="q6"><label for="q6b">לא</label>
+          <input type="radio" name="q6" id="q6c" value="3" data-in="q6"><label for="q6c">לא יודע מה זה</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="quiz-result" role="status" aria-live="polite" style="margin-top:22px;">
+      <span class="calc-out-eyebrow">התוצאה שלכם</span>
+      <h3 data-out="title">—</h3>
+      <p data-out="body"></p>
+      <p data-out="next"></p>
+    </div>
+
+    <div class="calc-actions">
+      <button type="button" class="calc-reset" data-calc-reset>איפוס השאלון</button>
+    </div>
+
+    <p class="calc-disclaimer">
+      <b>זו אינה בדיקת זכאות ואינה ייעוץ מס.</b> השאלון נועד לעזור לכם להבין
+      עד כמה הנושא דחוף עבורכם, ואילו מסמכים כדאי לאסוף. הזכאות בפועל,
+      גובה הפטור והתזמון הנכון נקבעים רק על בסיס הנתונים המלאים מול רשות המסים.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= WHY ============================= -->
+<section class="wrap section-soft" id="why">
+  <h2>למה דווקא כאן לא בנינו מחשבון</h2>
+  <p>
+    כמעט כל מחשבון "פטור על קצבה" שתמצאו ברשת מבקש שני-שלושה נתונים ומחזיר
+    מספר. הבעיה היא שהמספר האמיתי נגזר מדברים שהמשתמש לא מזין: כל מענק פרישה
+    פטור שהתקבל ב-32 השנים שקדמו לגיל הזכאות, כל משיכת פיצויים, כל היוון,
+    והתאמות של הסכומים לאורך השנים. מחשבון שמתעלם מאלה יציג בדרך כלל מספר
+    גבוה מדי - וזו בדיוק הטעות שעולה הכי הרבה כסף.
+  </p>
+  <p style="margin:0;">
+    לכן העדפנו לומר את זה בכנות: כאן צריך לפתוח מסמכים, לא להזיז סליידר.
+    השאלון למעלה עוזר לדעת אם זה דחוף - ו<a href="https://amnonbahar.co.il/kibua/" target="_blank" rel="noopener">המדריך המלא לקיבוע זכויות</a>
+    מסביר איך התהליך עצמו עובד.
+  </p>
+</section>
+
+<!-- ============================= PREP ============================= -->
+<section class="wrap" id="prep">
+  <h2>מה כדאי לאסוף לפני שמתחילים</h2>
+  <ul class="checklist">
+    <li>טופסי 161 ו-161א מכל סיום עבודה בעבר, ככל שיש</li>
+    <li>אישורים על משיכת כספי פיצויים או מענקי פרישה, כולל השנים שבהן התקבלו</li>
+    <li>דוחות שנתיים מכל הקופות והקרנות שברשותכם</li>
+    <li>מסמכים על היוון קצבה, אם בוצע</li>
+    <li>אישור על גובה הקצבה הצפויה או הקיימת</li>
+  </ul>
+  <p class="muted" style="margin-top:14px;font-size:14px;">
+    להעמקה: <a href="https://amnonbahar.co.il/kibua/" target="_blank" rel="noopener">קיבוע זכויות</a> ·
+    <a href="https://amnonbahar.co.il/prisha/" target="_blank" rel="noopener">תכנון וליווי פרישה</a> ·
+    <a href="https://amnonbahar.co.il/tikun190/" target="_blank" rel="noopener">תיקון 190</a> ·
+    <a href="pitzuyim.html">מחשבון פיצויים ורצף קצבה</a>
+  </p>
+</section>
+
+<!-- ============================= CLOSING ============================= -->
+<section class="wrap section-soft" id="contact">
+  <h2>אם המסמכים לא נמצאים - זה עדיין פתיר</h2>
+  <p class="lede">
+    חלק גדול מהמידע ניתן לאיתור מול הגופים המנהלים ומול רשות המסים, גם
+    כשנדמה שהוא אבד. בשיחת היכרות אישית נבין מה יש, מה חסר, ומה סדר הפעולות
+    הנכון עבורכם.
+  </p>
+  <div class="cta-row">
+    <a href="https://wa.me/972544909201" class="btn btn-primary" target="_blank" rel="noopener">לקביעת שיחת היכרות</a>
+    <a href="index.html" class="btn btn-secondary">לשאר המחשבונים</a>
+  </div>
+</section>
+
+<script>
+AB.init('#kibuaQuiz', function (v) {
+  var score = (v.q1 || 0) + (v.q2 || 0) + (v.q3 || 0) + (v.q4 || 0) + (v.q5 || 0) + (v.q6 || 0);
+  var near = (v.q1 >= 2) || (v.q2 >= 2);
+  var history = (v.q3 >= 2) || (v.q4 >= 2) || (v.q5 >= 2);
+
+  var title, body, next;
+  if (near && score >= 9) {
+    title = 'כדאי לטפל בזה עכשיו';
+    body = 'אתם קרובים לשלב שבו קיבוע הזכויות רלוונטי בפועל, וגם יש בהיסטוריה שלכם ' +
+           'רכיבים שמשפיעים ישירות על גובה הפטור - מענקים, משיכות פיצויים או היוון. ' +
+           'בשילוב הזה כל חודש של דחייה יכול לעלות כסף, בעיקר בגלל מועדי הדיווח הקבועים בחוק.';
+    next = 'הצעד הבא: לאסוף את המסמכים מהרשימה למטה, ולעבור עליהם עם מי שמכיר את התהליך - לפני שמגישים.';
+  } else if (near) {
+    title = 'רלוונטי לכם, ובזמן טוב';
+    body = 'אתם בשלב שבו קיבוע הזכויות כבר על השולחן, ולפי התשובות שלכם ההיסטוריה ' +
+           'נראית פשוטה יחסית. זה דווקא מצב טוב: יש זמן לעשות את זה מסודר, ולא בלחץ ' +
+           'של מועד אחרון.';
+    next = 'הצעד הבא: לוודא שאין מענק או משיכה ישנים ששכחתם, ולהיערך להגשה בזמן.';
+  } else if (history) {
+    title = 'עוד מוקדם - אבל יש מה לשמור מהיום';
+    body = 'הפרישה עוד לא כאן, אבל בהיסטוריה שלכם כבר יש רכיבים שישפיעו על הפטור ' +
+           'בעתיד. הטעות הנפוצה היא לגלות אותם רק בגיל הפרישה, כשהמסמכים כבר לא ' +
+           'נמצאים ואי אפשר לשחזר את הנתונים.';
+    next = 'הצעד הבא: לאתר ולשמור עכשיו את המסמכים מכל סיום עבודה בעבר. זה שווה הרבה בעוד עשור.';
+  } else {
+    title = 'לא דחוף כרגע';
+    body = 'לפי התשובות שלכם, קיבוע זכויות עדיין לא רלוונטי - אין קצבה, אין מענקים ' +
+           'או משיכות בעבר, והפרישה רחוקה. זה מצב נוח: אין מה לתקן, ויש הרבה מה לבנות.';
+    next = 'הצעד הבא: להתמקד בבניית החיסכון עצמו. המחשבונים של הקצבה הצפויה ודמי הניהול רלוונטיים לכם יותר בשלב הזה.';
+  }
+
+  return { title: title, body: body, next: next };
+});
+</script>
+</main>
+
+<footer class="pv-foot">
+  <p><b>אמנון בכר</b> · מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827 · השירות ניתן בכל הארץ</p>
+  <p>זו סביבת תצוגה לבדיקת המחשבונים בלבד. הגרסה המלאה, כולל טופס יצירת הקשר,
+     נמצאת ב-<a href="https://amnonbahar.co.il/machshevonim/" target="_blank" rel="noopener">amnonbahar.co.il</a>.
+     המחשבונים הם אומדן להמחשה בלבד ואינם ייעוץ או הבטחת תשואה.</p>
+</footer>
+
+</body>
+</html>

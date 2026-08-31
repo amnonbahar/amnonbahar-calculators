@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>מחשבון פנסיה והטבות מס לעצמאים · מחשבונים · אמנון בכר</title>
+<meta name="description" content="מחשבון לעצמאים 2026: כמה אתם חייבים להפקיד לפנסיה לפי חוק, כמה כדאי להפקיד למיצוי מלא של הטבות המס, וכמה ההפקדה באמת עולה לכם אחרי החזר המס.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23081e42'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23bf9653' text-anchor='middle'>AB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="preview.css">
+<script src="preview.js" defer></script>
+<script src="calc.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">דילוג לתוכן הראשי</a>
+
+<!-- ===== סרגל תצוגה זמני - לא חלק מהאתר החי ===== -->
+<div class="pv-bar">
+  <div class="pv-inner">
+    <span class="pv-flag">גרסת תצוגה</span>
+    <nav class="pv-nav" aria-label="מעבר בין מחשבונים">
+      <a href="index.html">כל המחשבונים</a>
+      <a href="dmei-nihul.html">דמי ניהול</a>
+      <a href="pensiya.html">קצבת פנסיה</a>
+      <a href="atzmaim.html" class="is-active" aria-current="page">עצמאים</a>
+      <a href="keren-hishtalmut.html">קרן השתלמות</a>
+      <a href="yeladim.html">חיסכון לילדים</a>
+      <a href="ovdan-kosher.html">אכ״ע</a>
+      <a href="pitzuyim.html">פיצויים</a>
+      <a href="kibua-zchuyot.html">קיבוע זכויות</a>
+    </nav>
+    <a class="pv-live" href="https://amnonbahar.co.il" target="_blank" rel="noopener">לאתר החי ↗</a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="wrap" style="padding-top:40px;">
+  <span class="eyebrow">מחשבון · עצמאים</span>
+  <h1>אצל עצמאי, הפקדה לפנסיה עולה פחות ממה שנראה.</h1>
+  <p class="lede">
+    לעצמאים יש חובת הפקדה מינימלית בחוק - ומעליה מדרגה שלמה של הטבות מס
+    שרבים לא ממצים. המחשבון מראה שלושה מספרים: מה חייבים, מה כדאי,
+    וכמה זה באמת עולה אחרי החזר המס.
+  </p>
+</section>
+
+<div class="wrap">
+  <p class="byline"><b>מאת אמנון בכר</b><span class="byline-dot"></span><span>מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827</span></p>
+</div>
+
+<div class="trust-bar">
+  <div class="muted">החישוב רץ בדפדפן שלכם בלבד - שום נתון שתזינו כאן לא נשלח אלינו, לא נשמר ולא מועבר לאף גורם.</div>
+</div>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section class="wrap" id="calc" style="padding-top:22px;">
+  <div class="calc" id="selfCalc">
+    <div class="calc-head">
+      <h2 style="font-size:24px;">ההפקדה שלכם, והטבת המס שמאחוריה</h2>
+      <p>נתוני 2026. הזינו הכנסה חייבת ושיעור מס שולי, וראו את שלוש השכבות.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-fields">
+        <div class="calc-field">
+          <label for="scIncome">הכנסה שנתית חייבת מהעסק</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="scIncome" type="number" inputmode="numeric" min="0" step="5000" value="300000" data-in="income">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">ההכנסה החייבת השנתית, אחרי הוצאות ולפני הפקדות לפנסיה ולקרן השתלמות.</p>
+        </div>
+
+        <fieldset class="calc-field">
+          <legend class="calc-legend">שיעור המס השולי שלכם</legend>
+          <div class="calc-seg">
+            <input type="radio" name="scTax" id="scTax10" value="10" data-in="tax"><label for="scTax10">10%</label>
+            <input type="radio" name="scTax" id="scTax14" value="14" data-in="tax"><label for="scTax14">14%</label>
+            <input type="radio" name="scTax" id="scTax20" value="20" data-in="tax"><label for="scTax20">20%</label>
+            <input type="radio" name="scTax" id="scTax31" value="31" checked data-in="tax"><label for="scTax31">31%</label>
+            <input type="radio" name="scTax" id="scTax35" value="35" data-in="tax"><label for="scTax35">35%</label>
+            <input type="radio" name="scTax" id="scTax47" value="47" data-in="tax"><label for="scTax47">47%</label>
+          </div>
+          <p class="calc-hint">המדרגה שבה נמצא השקל הבא שלכם. לא בטוחים? רואה החשבון שלכם יידע לומר, וגם אנחנו יכולים לבדוק יחד.</p>
+        </fieldset>
+
+        <div class="calc-field">
+          <label for="scActual">כמה אתם מפקידים היום לפנסיה בשנה</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="scActual" type="number" inputmode="numeric" min="0" step="1000" value="12000" data-in="actual">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">סך ההפקדות שלכם לקרן פנסיה או לקופת גמל לתגמולים בשנה. אם עוד לא התחלתם - 0.</p>
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="calc-reset" data-calc-reset>איפוס לערכי ברירת המחדל</button>
+        </div>
+
+        <div class="calc-disclaimer" style="margin-top:4px;">
+          <b>למה זה נראה כמו שתי הטבות נפרדות?</b> כי זה באמת כך. חלק מההפקדה
+          מוכר כניכוי - הוא מקטין את ההכנסה החייבת שלכם. חלק אחר מזכה בזיכוי -
+          החזר קבוע מהמס עצמו. שתי ההטבות פועלות יחד, וזה מה שהופך את
+          ההפקדה למשתלמת במיוחד בשיעורי מס גבוהים.
+        </div>
+      </div>
+
+      <div class="calc-out" role="status" aria-live="polite">
+        <span class="calc-out-eyebrow">העלות האמיתית של ההפקדה המומלצת</span>
+        <p class="calc-out-value" data-out="netCost">₪0</p>
+        <p class="calc-out-sub" data-out="netSub"></p>
+
+        <div class="calc-bars">
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>מה שאתם מפקידים היום</span><span class="v" data-out="actual2">₪0</span></div>
+            <div class="calc-bar is-alt"><span data-bar="actualPct"></span></div>
+          </div>
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>חובת ההפקדה בחוק</span><span class="v" data-out="mandatory">₪0</span></div>
+            <div class="calc-bar is-alt"><span data-bar="mandatoryPct"></span></div>
+          </div>
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>מיצוי מלא של הטבות המס</span><span class="v" data-out="optimal">₪0</span></div>
+            <div class="calc-bar"><span data-bar="optimalPct"></span></div>
+          </div>
+        </div>
+
+        <ul class="calc-out-list">
+          <li><span class="k">הכנסה מזכה לחישוב (עד התקרה)</span><span class="v" data-out="eligible">₪0</span></li>
+          <li><span class="k">חיסכון במס מהניכוי</span><span class="v pos" data-out="dedSave">₪0</span></li>
+          <li><span class="k">החזר מהזיכוי</span><span class="v pos" data-out="creditSave">₪0</span></li>
+          <li><span class="k">סה״כ הטבת מס שנתית</span><span class="v pos" data-out="totalSave">₪0</span></li>
+          <li><span class="k">הטבה שאתם מפספסים היום</span><span class="v pos" data-out="missed">₪0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="calc-assump">
+      <summary>הנתונים וההנחות שמאחורי החישוב (2026)</summary>
+      <div class="calc-assump-body">
+        <ul>
+          <li><b>חובת ההפקדה:</b> 4.45% על חלק ההכנסה עד מחצית השכר הממוצע במשק, ו-12.55% על החלק שבין מחצית השכר הממוצע לשכר הממוצע המלא. מעל השכר הממוצע אין חובה. השכר הממוצע במשק ששימש לחישוב: ₪13,769 לחודש.</li>
+          <li><b>הטבות המס:</b> ניכוי של עד 11% מההכנסה המזכה, וזיכוי במס בשיעור 35% על עד 5.5% נוספים - יחד עד 16.5%. תקרת ההכנסה המזכה לשנת 2026: ₪232,800 בשנה.</li>
+          <li>החישוב מציג את החיסכון במס בלבד, ואינו כולל השפעות על דמי ביטוח לאומי או על מס יסף.</li>
+          <li>ההפקדה לקרן השתלמות היא הטבה נפרדת ונוספת, ולה יש <a href="keren-hishtalmut.html">מחשבון משלה</a>.</li>
+          <li>הסכומים והתקרות מתעדכנים מדי שנה. הערכים כאן נכונים לשנת המס 2026.</li>
+        </ul>
+      </div>
+    </details>
+
+    <p class="calc-disclaimer">
+      <b>אומדן להמחשה בלבד.</b> אינו ייעוץ מס, אינו ייעוץ פנסיוני ואינו תחליף
+      לבדיקה אישית מול רואה החשבון שלכם. שיעור המס השולי בפועל, ניכויים אחרים
+      ומצב אישי יכולים לשנות את התוצאה.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= READ ============================= -->
+<section class="wrap section-soft" id="read">
+  <h2>שלוש השכבות, לפי הסדר</h2>
+  <ol class="steps">
+    <li><h3>מה שחייבים</h3><p>חוק פנסיה חובה לעצמאים קובע רצפה מינימלית. אי-הפקדה חושפת לקנס, אבל חשוב מכך - היא משאירה אתכם בלי כרית פנסיונית בכלל.</p></li>
+    <li><h3>מה שכדאי</h3><p>מעל הרצפה נמצאות הטבות המס. מי שמפקיד את המקסימום המוכר משלם על החיסכון שלו הרבה פחות מהסכום המלא - וזה הפער שהמחשבון מציג.</p></li>
+    <li><h3>מה שמעבר</h3><p>אחרי מיצוי הטבות המס, השאלה כבר לא "כמה מס נחסוך" אלא "איפה נכון להחזיק את הכסף". שם נכנסים לתמונה קרן השתלמות, קופת גמל להשקעה ואפיקים נוספים.</p></li>
+  </ol>
+  <p class="muted" style="margin-top:16px;font-size:14px;">
+    להעמקה: <a href="https://amnonbahar.co.il/pensia/" target="_blank" rel="noopener">קרן פנסיה</a> ·
+    <a href="https://amnonbahar.co.il/kerenhish/" target="_blank" rel="noopener">קרן השתלמות</a> ·
+    <a href="https://amnonbahar.co.il/gemelinvest/" target="_blank" rel="noopener">קופת גמל להשקעה</a> ·
+    <a href="https://amnonbahar.co.il/ovdankosher/" target="_blank" rel="noopener">אובדן כושר עבודה לעצמאים</a>
+  </p>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="wrap" id="faq">
+  <h2>שאלות נפוצות</h2>
+
+  <details class="faq-item">
+    <summary><h3>מה קורה אם לא הפקדתי בכלל?</h3></summary>
+    <div class="faq-a"><p>
+      חוק פנסיה חובה לעצמאים מטיל קנס על אי-הפקדה, אבל הנזק המרכזי הוא אחר:
+      שנה בלי הפקדה היא שנה שלא נצברת, ואי אפשר להשלים אותה בדיעבד עם אותה
+      הטבת מס. ככל שמתחילים מוקדם יותר, המחיר נמוך יותר.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>ההכנסה שלי לא יציבה - איך מפקידים?</h3></summary>
+    <div class="faq-a"><p>
+      אפשר להפקיד בהוראת קבע חודשית ולהשלים סכום חד-פעמי לקראת סוף השנה,
+      אחרי שכבר יודעים איך נראית ההכנסה בפועל. זו דרך נפוצה למי שההכנסה
+      שלו משתנה מחודש לחודש.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>יש לי גם הכנסה כשכיר וגם עסק - מה עושים?</h3></summary>
+    <div class="faq-a"><p>
+      התמונה מורכבת יותר: ההפקדות דרך המעסיק כבר מנצלות חלק מהתקרות, וצריך
+      לבדוק כמה "מקום" נשאר להפקדה כעצמאי. זה בדיוק סוג המקרה ששווה לעבור
+      עליו יחד, כדי לא להפקיד מעבר לתקרה בלי הטבה.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>הפקדה לקרן פנסיה או לקופת גמל?</h3></summary>
+    <div class="faq-a"><p>
+      בקרן פנסיה מקיפה יש גם כיסוי לשאירים ולאובדן כושר עבודה, שנגבה מההפקדה.
+      בקופת גמל אין כיסויים כאלה, וצריך להסדיר אותם בנפרד. ההחלטה תלויה במצב
+      המשפחתי, בכיסויים שכבר יש לכם ובמטרות - ולא בהטבת המס, שדומה בשניהם.
+    </p></div>
+  </details>
+</section>
+
+<!-- ============================= CLOSING ============================= -->
+<section class="wrap section-soft" id="contact">
+  <h2>הפקדה נכונה שווה יותר מהפקדה גדולה</h2>
+  <p class="lede">
+    בשיחת היכרות אישית נבדוק כמה כדאי לכם להפקיד, לאן, ובאיזה תזמון -
+    כך שההפקדה תמצה את ההטבה בלי לחרוג ממנה, ותתאים לתזרים האמיתי של העסק.
+  </p>
+  <div class="cta-row">
+    <a href="https://wa.me/972544909201" class="btn btn-primary" target="_blank" rel="noopener">לקביעת שיחת היכרות</a>
+    <a href="index.html" class="btn btn-secondary">לשאר המחשבונים</a>
+  </div>
+</section>
+
+<script>
+AB.init('#selfCalc', function (v) {
+  var AVG = 13769;              /* שכר ממוצע במשק, 2026 */
+  var CEIL = 232800;            /* תקרת הכנסה מזכה שנתית, 2026 */
+  var monthlyIncome = v.income / 12;
+
+  /* חובת הפקדה: 4.45% עד מחצית השכר הממוצע, 12.55% מהמחצית עד השכר הממוצע */
+  var tier1 = Math.min(monthlyIncome, AVG / 2);
+  var tier2 = AB.clamp(monthlyIncome - AVG / 2, 0, AVG / 2);
+  var mandatory = (tier1 * 0.0445 + tier2 * 0.1255) * 12;
+
+  var eligible = Math.min(v.income, CEIL);
+  var optimal = eligible * 0.165;
+  var dedBase = eligible * 0.11;
+  var credBase = eligible * 0.055;
+  var dedSave = dedBase * (v.tax / 100);
+  var credSave = credBase * 0.35;
+  var totalSave = dedSave + credSave;
+  var netCost = optimal - totalSave;
+
+  /* ההטבה שכבר מנוצלת בפועל לפי ההפקדה הקיימת */
+  var actual = Math.max(0, v.actual);
+  var usedDed = Math.min(actual, dedBase);
+  var usedCred = AB.clamp(actual - dedBase, 0, credBase);
+  var usedSave = usedDed * (v.tax / 100) + usedCred * 0.35;
+  var missed = Math.max(0, totalSave - usedSave);
+
+  var max = Math.max(actual, mandatory, optimal, 1);
+  return {
+    netCost: AB.money(netCost),
+    netSub: 'הפקדה של ' + AB.money(optimal) + ' בשנה עולה לכם בפועל ' + AB.money(netCost) +
+            ', אחרי הטבת מס של ' + AB.money(totalSave) + '.',
+    actual2: AB.money(actual),
+    mandatory: AB.money(mandatory),
+    optimal: AB.money(optimal),
+    actualPct: (actual / max) * 100,
+    mandatoryPct: (mandatory / max) * 100,
+    optimalPct: (optimal / max) * 100,
+    eligible: AB.money(eligible),
+    dedSave: AB.money(dedSave),
+    creditSave: AB.money(credSave),
+    totalSave: AB.money(totalSave),
+    missed: missed > 1 ? AB.money(missed) : 'אתם ממצים את ההטבה'
+  };
+});
+</script>
+</main>
+
+<footer class="pv-foot">
+  <p><b>אמנון בכר</b> · מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827 · השירות ניתן בכל הארץ</p>
+  <p>זו סביבת תצוגה לבדיקת המחשבונים בלבד. הגרסה המלאה, כולל טופס יצירת הקשר,
+     נמצאת ב-<a href="https://amnonbahar.co.il/machshevonim/" target="_blank" rel="noopener">amnonbahar.co.il</a>.
+     המחשבונים הם אומדן להמחשה בלבד ואינם ייעוץ או הבטחת תשואה.</p>
+</footer>
+
+</body>
+</html>

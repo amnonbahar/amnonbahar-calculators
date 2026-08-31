@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>מחשבון פיצויי פיטורים ורצף קצבה · מחשבונים · אמנון בכר</title>
+<meta name="description" content="מחשבון פיצויים 2026: כמה פיצויים מגיעים לכם לפי ותק ושכר, כמה מזה פטור ממס, ומה אתם מוותרים עליו בקצבה החודשית אם תמשכו את הכסף היום.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23081e42'/><text x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23bf9653' text-anchor='middle'>AB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="preview.css">
+<script src="preview.js" defer></script>
+<script src="calc.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">דילוג לתוכן הראשי</a>
+
+<!-- ===== סרגל תצוגה זמני - לא חלק מהאתר החי ===== -->
+<div class="pv-bar">
+  <div class="pv-inner">
+    <span class="pv-flag">גרסת תצוגה</span>
+    <nav class="pv-nav" aria-label="מעבר בין מחשבונים">
+      <a href="index.html">כל המחשבונים</a>
+      <a href="dmei-nihul.html">דמי ניהול</a>
+      <a href="pensiya.html">קצבת פנסיה</a>
+      <a href="atzmaim.html">עצמאים</a>
+      <a href="keren-hishtalmut.html">קרן השתלמות</a>
+      <a href="yeladim.html">חיסכון לילדים</a>
+      <a href="ovdan-kosher.html">אכ״ע</a>
+      <a href="pitzuyim.html" class="is-active" aria-current="page">פיצויים</a>
+      <a href="kibua-zchuyot.html">קיבוע זכויות</a>
+    </nav>
+    <a class="pv-live" href="https://amnonbahar.co.il" target="_blank" rel="noopener">לאתר החי ↗</a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="wrap" style="padding-top:40px;">
+  <span class="eyebrow">מחשבון · פיצויים ורצף קצבה</span>
+  <h1>הכסף שקל למשוך היום, ויקר לגלות שחסר בפרישה.</h1>
+  <p class="lede">
+    בסיום עבודה עומדת שאלה אחת: למשוך את כספי הפיצויים, או להשאיר אותם
+    בחיסכון. המחשבון מציג את שני הצדדים - כמה תקבלו עכשיו נטו, וכמה
+    קצבה חודשית אתם מוותרים עליה בתמורה.
+  </p>
+</section>
+
+<div class="wrap">
+  <p class="byline"><b>מאת אמנון בכר</b><span class="byline-dot"></span><span>מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827</span></p>
+</div>
+
+<div class="trust-bar">
+  <div class="muted">החישוב רץ בדפדפן שלכם בלבד - שום נתון שתזינו כאן לא נשלח אלינו, לא נשמר ולא מועבר לאף גורם.</div>
+</div>
+
+<!-- ============================= CALCULATOR ============================= -->
+<section class="wrap" id="calc" style="padding-top:22px;">
+  <div class="calc" id="sevCalc">
+    <div class="calc-head">
+      <h2 style="font-size:24px;">הזכאות, המס, והמחיר של המשיכה</h2>
+      <p>נתוני 2026. הזינו שכר וותק, וראו את התמונה משני הצדדים.</p>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-fields">
+        <div class="calc-field">
+          <label for="svSalary">שכר קובע אחרון (חודשי ברוטו)</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="svSalary" type="number" inputmode="numeric" min="0" step="500" value="18000" data-in="salary">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">בדרך כלל השכר החודשי האחרון, לפי הרכיבים שנחשבים לצורך פיצויים.</p>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="svYears">ותק במקום העבודה</label>
+            <span class="calc-slider-val" data-out="yearsLabel">10 שנים</span>
+          </div>
+          <input class="calc-range" id="svYears" type="range" min="0.5" max="40" step="0.5" value="10" data-in="yrs">
+        </div>
+
+        <div class="calc-field">
+          <label for="svSaved">צבירה קיימת ברכיב הפיצויים</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="svSaved" type="number" inputmode="numeric" min="0" step="1000" value="150000" data-in="saved">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">הסכום שהמעסיק הפקיד לאורך השנים לרכיב הפיצויים בקרן או בפוליסה. מופיע בדוח השנתי.</p>
+        </div>
+
+        <div class="calc-field">
+          <label for="svCeil">תקרת הפטור ממס לשנת עבודה</label>
+          <span class="calc-input-wrap">
+            <input class="calc-input" id="svCeil" type="number" inputmode="numeric" min="0" step="50" value="13750" data-in="ceil">
+            <span class="calc-unit">₪</span>
+          </span>
+          <p class="calc-hint">נכון לשנת 2026 התקרה עומדת על ₪13,750 לכל שנת עבודה. היא מתעדכנת מדי שנה, ולכן ניתנת כאן לעריכה.</p>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="svTax">שיעור המס השולי שלכם</label>
+            <span class="calc-slider-val" data-out="taxLabel">31%</span>
+          </div>
+          <input class="calc-range" id="svTax" type="range" min="10" max="50" step="1" value="31" data-in="tax">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="svToRet">שנים עד גיל הפרישה</label>
+            <span class="calc-slider-val" data-out="toRetLabel">20 שנים</span>
+          </div>
+          <input class="calc-range" id="svToRet" type="range" min="0" max="45" step="1" value="20" data-in="toRet">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="svReturn">תשואה שנתית להנחת החישוב</label>
+            <span class="calc-slider-val" data-out="returnLabel">4.0%</span>
+          </div>
+          <input class="calc-range" id="svReturn" type="range" min="0" max="8" step="0.1" value="4" data-in="ret">
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-slider-top">
+            <label for="svFactor">מקדם המרה לקצבה</label>
+            <span class="calc-slider-val" data-out="factorLabel">200</span>
+          </div>
+          <input class="calc-range" id="svFactor" type="range" min="150" max="250" step="1" value="200" data-in="factor">
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="calc-reset" data-calc-reset>איפוס לערכי ברירת המחדל</button>
+        </div>
+      </div>
+
+      <div class="calc-out" role="status" aria-live="polite">
+        <span class="calc-out-eyebrow">מה עולה משיכה של הפיצויים היום</span>
+        <p class="calc-out-value" data-out="lostPension">₪0</p>
+        <p class="calc-out-sub" data-out="lostSub"></p>
+
+        <div class="calc-bars">
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>נטו ביד אם תמשכו עכשיו</span><span class="v" data-out="netNow">₪0</span></div>
+            <div class="calc-bar is-alt"><span data-bar="netPct"></span></div>
+          </div>
+          <div class="calc-bar-row">
+            <div class="calc-bar-top"><span>שווי הכסף בגיל הפרישה אם יישאר</span><span class="v" data-out="futureVal">₪0</span></div>
+            <div class="calc-bar"><span data-bar="futurePct"></span></div>
+          </div>
+        </div>
+
+        <ul class="calc-out-list">
+          <li><span class="k">זכאות לפי חוק (שכר × ותק)</span><span class="v" data-out="entitled">₪0</span></li>
+          <li><span class="k">כבר צבור ברכיב הפיצויים</span><span class="v" data-out="saved2">₪0</span></li>
+          <li><span class="k">השלמה שהמעסיק נדרש להוסיף</span><span class="v" data-out="topup">₪0</span></li>
+          <li><span class="k">פטור ממס (עד התקרה × ותק)</span><span class="v pos" data-out="exempt">₪0</span></li>
+          <li><span class="k">חייב במס</span><span class="v" data-out="taxable">₪0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="calc-assump">
+      <summary>הנתונים וההנחות שמאחורי החישוב (2026)</summary>
+      <div class="calc-assump-body">
+        <ul>
+          <li>הזכאות לפיצויים מחושבת כשכר חודשי אחד לכל שנת עבודה, לפי השכר הקובע שהזנתם.</li>
+          <li>הפטור ממס מוגבל לתקרה לכל שנת עבודה - ₪13,750 בשנת 2026 - ולכל היותר עד גובה הסכום שנמשך בפועל. סכום מעבר לכך חייב במס לפי שיעור המס השולי.</li>
+          <li>שווי הכסף בגיל הפרישה מחושב כצמיחה של הסכום שהיה נשאר בחיסכון (לפני מס), לפי התשואה השנתית שבחרתם, בלי הפקדות נוספות ובלי דמי ניהול.</li>
+          <li>הקצבה שמוותרים עליה מחושבת מחלוקת הסכום העתידי במקדם ההמרה שבחרתם.</li>
+          <li>החישוב אינו כולל השלמות מכוח הסכם אישי או קיבוצי, ואינו כולל רכיבי שכר שאינם נחשבים לצורך פיצויים.</li>
+        </ul>
+      </div>
+    </details>
+
+    <p class="calc-disclaimer">
+      <b>אומדן להמחשה בלבד. יש כאן נקודה קריטית שאינה מתומחרת במחשבון:</b>
+      משיכת פיצויים בפטור ממס פוגעת בהמשך בפטור שיינתן על הקצבה החודשית בפרישה,
+      דרך מנגנון קיבוע הזכויות. משמעות הדבר שהמשיכה "עולה" גם במס עתידי, מעבר
+      לאובדן החיסכון. זו החלטה שכדאי לקבל עם ליווי, ולא בטופס שממלאים ביום
+      האחרון בעבודה.
+    </p>
+  </div>
+</section>
+
+<!-- ============================= READ ============================= -->
+<section class="wrap section-soft" id="read">
+  <h2>שלוש האפשרויות שעומדות בפניכם</h2>
+  <ol class="steps">
+    <li><h3>משיכה מלאה</h3><p>הכסף ביד עכשיו, בניכוי מס על החלק שמעל התקרה. הפתרון הנכון כשיש צורך אמיתי ומיידי - ופחות נכון כשהוא "כי אפשר".</p></li>
+    <li><h3>השארה בחיסכון (רצף קצבה)</h3><p>הכסף נשאר בקופה, ממשיך לצבור תשואה, ומצטרף לקצבה החודשית בפרישה. גם הפטור על הקצבה נשמר.</p></li>
+    <li><h3>רצף פיצויים למעסיק הבא</h3><p>הזכויות והוותק ממשיכים לצבור אצל המעסיק החדש. רלוונטי במעבר מיידי בין מקומות עבודה, ויש לו כללי דיווח משלו.</p></li>
+  </ol>
+  <p class="muted" style="margin-top:16px;font-size:14px;">
+    להעמקה: <a href="https://amnonbahar.co.il/prisha/" target="_blank" rel="noopener">תכנון וליווי פרישה</a> ·
+    <a href="https://amnonbahar.co.il/kibua/" target="_blank" rel="noopener">קיבוע זכויות</a> ·
+    <a href="kibua-zchuyot.html">בדיקת התאמה לקיבוע זכויות</a> ·
+    <a href="https://amnonbahar.co.il/tikun190/" target="_blank" rel="noopener">תיקון 190</a>
+  </p>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="wrap" id="faq">
+  <h2>שאלות נפוצות</h2>
+
+  <details class="faq-item">
+    <summary><h3>למה משיכת פיצויים פוגעת בפטור על הקצבה?</h3></summary>
+    <div class="faq-a"><p>
+      הפטור על מענקי פרישה והפטור על הקצבה החודשית מגיעים מאותה "קופת פטור"
+      כוללת. כל שקל שנמשך בפטור בעת עזיבת עבודה מקטין את הפטור שיישאר לקצבה
+      בפרישה. זו בדיוק החשיבות של קיבוע הזכויות בזמן.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>המעסיק הפקיד פחות ממה שמגיע לי. מה עושים?</h3></summary>
+    <div class="faq-a"><p>
+      שורת "השלמה" במחשבון היא ההפרש בין הזכאות לפי חוק לבין מה שנצבר בפועל.
+      במקרים רבים המעסיק נדרש להשלים אותו בסיום העבודה. שווה לבדוק זאת מול
+      תלוש השכר והדוח, ולא להסתמך על מה שנאמר בעל פה.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>עברתי כמה מקומות עבודה. איך זה מצטבר?</h3></summary>
+    <div class="faq-a"><p>
+      לכל תקופת עבודה יש שכר קובע וותק משלה, והפטור מחושב לפי סך שנות
+      העבודה. כשיש כמה מעסיקים בעבר, התמונה מורכבת יותר - ואת השורה
+      התחתונה כדאי לבנות מהמסמכים בפועל.
+    </p></div>
+  </details>
+
+  <details class="faq-item">
+    <summary><h3>יש מועד אחרון להחלטה?</h3></summary>
+    <div class="faq-a"><p>
+      כן. יש מועדים קבועים בחוק לדיווח על בחירה ברצף קצבה או ברצף פיצויים,
+      ואיחור עלול לסגור את האפשרות. זו אחת הסיבות לטפל בזה בסמוך לעזיבה,
+      ולא כעבור שנה.
+    </p></div>
+  </details>
+</section>
+
+<!-- ============================= CLOSING ============================= -->
+<section class="wrap section-soft" id="contact">
+  <h2>ההחלטה הזאת נעשית פעם אחת</h2>
+  <p class="lede">
+    בשיחת היכרות אישית נעבור על הנתונים בפועל - הוותק, מה שנצבר, המסמכים
+    מהמעסיק - ונבחן את המשמעות של כל אפשרות, כולל השפעתה על הקצבה והמס
+    בפרישה.
+  </p>
+  <div class="cta-row">
+    <a href="https://wa.me/972544909201" class="btn btn-primary" target="_blank" rel="noopener">לקביעת שיחת היכרות</a>
+    <a href="index.html" class="btn btn-secondary">לשאר המחשבונים</a>
+  </div>
+</section>
+
+<script>
+AB.init('#sevCalc', function (v) {
+  var entitled = v.salary * v.yrs;
+  var saved = Math.max(0, v.saved);
+  var topup = Math.max(0, entitled - saved);
+  var amount = Math.max(entitled, saved);
+  var exempt = Math.min(amount, v.ceil * v.yrs);
+  var taxable = Math.max(0, amount - exempt);
+  var netNow = exempt + taxable * (1 - v.tax / 100);
+  var futureVal = amount * Math.pow(1 + v.ret / 100, v.toRet);
+  var lostPension = futureVal / Math.max(1, v.factor);
+  var max = Math.max(netNow, futureVal, 1);
+
+  return {
+    yearsLabel: AB.years(v.yrs),
+    taxLabel: AB.pct(v.tax),
+    toRetLabel: AB.years(v.toRet),
+    returnLabel: AB.pct(v.ret),
+    factorLabel: Math.round(v.factor),
+    lostPension: AB.money(lostPension),
+    lostSub: 'זו התוספת החודשית לקצבה שהייתם מקבלים בפרישה אילו הכסף היה נשאר בחיסכון - לעומת ' +
+             AB.money(netNow) + ' נטו ביד היום.',
+    netNow: AB.money(netNow),
+    futureVal: AB.money(futureVal),
+    netPct: (netNow / max) * 100,
+    futurePct: (futureVal / max) * 100,
+    entitled: AB.money(entitled),
+    saved2: AB.money(saved),
+    topup: topup > 1 ? AB.money(topup) : 'אין חוסר',
+    exempt: AB.money(exempt),
+    taxable: taxable > 1 ? AB.money(taxable) : 'הכל בפטור'
+  };
+});
+</script>
+</main>
+
+<footer class="pv-foot">
+  <p><b>אמנון בכר</b> · מתכנן פיננסי ופנסיוני עצמאי · רישיון L-00133827 · השירות ניתן בכל הארץ</p>
+  <p>זו סביבת תצוגה לבדיקת המחשבונים בלבד. הגרסה המלאה, כולל טופס יצירת הקשר,
+     נמצאת ב-<a href="https://amnonbahar.co.il/machshevonim/" target="_blank" rel="noopener">amnonbahar.co.il</a>.
+     המחשבונים הם אומדן להמחשה בלבד ואינם ייעוץ או הבטחת תשואה.</p>
+</footer>
+
+</body>
+</html>
